@@ -34,7 +34,7 @@ const VideoCarousel = () => {
   });
 
   const [loadedVideos, setLoadedVideos] = useState<number>(0);
-  const { isEnd, isLastVideo, startPlay, videoId, isPlaying } = video;
+  const { isLastVideo, startPlay, videoId, isPlaying } = video;
 
   // GSAP animations
   useGSAP(() => {
@@ -225,11 +225,11 @@ const VideoCarousel = () => {
   }, [isLastVideo, isPlaying, handleProcess]);
 
   return (
-    <div className="video-container ">
+    <div className="video-container">
       <div className="flex items-center overflow-hidden">
         {hightlightsSlides.map((list, i) => (
           <div key={list.id} className="slider sm:pr-20 pr-10 flex-shrink-0">
-            <div className="relative sm:w-[70vw] w-[100vw] md:h-[70vh] sm:h-[50vh] h-[35vh]">
+            <div className="relative sm:w-[80vw] w-[95vw] md:h-[70vh] sm:h-[50vh] h-[35vh]">
               <div className="w-full h-full flex items-center rounded-3xl overflow-hidden bg-black">
                 <video
                   className={`video ${
@@ -277,15 +277,15 @@ const VideoCarousel = () => {
         ))}
       </div>
 
-      <div className="relative flex justify-center items-center mt-10">
-        <div className="flex items-center py-5 px-7 bg-zinc-900 backdrop-blur rounded-full">
+      <div className="relative flex items-center mt-10">
+        <div className="flex items-center py-5 px-7 bg-gray-300 backdrop-blur rounded-full">
           {hightlightsSlides.map((_, i) => (
             <div
               key={i}
               ref={(el) => {
                 videoDivRef.current[i] = el;
               }}
-              className="mx-2 w-3 h-3 bg-zinc-500 rounded-full relative cursor-pointer"
+              className="mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer"
               onClick={() => {
                 setVideo(prev => ({
                   ...prev,
@@ -308,7 +308,7 @@ const VideoCarousel = () => {
         </div>
 
         <button 
-          className="ml-4 p-2 rounded-full bg-zinc-700 backdrop-blur flex items-center justify-center hover:bg-zinc-400 transition-colors"
+          className="ml-4 p-4 rounded-full bg-gray-300 backdrop-blur flex items-center justify-center hover:bg-gray-400 transition-colors"
           onClick={handlePlayPause}
           type="button"
         >
@@ -321,14 +321,14 @@ const VideoCarousel = () => {
         </button>
       </div>
 
-      {/* Debug info - remove in production
+      {/* Debug info - remove in production */}
       <div className="mt-4 text-sm text-gray-600 bg-gray-100 p-2 rounded">
         <p>Current Video: {videoId + 1}/{hightlightsSlides.length}</p>
         <p>Is Playing: {isPlaying ? 'Yes' : 'No'}</p>
         <p>Start Play: {startPlay ? 'Yes' : 'No'}</p>
-        <p>Loaded Videos: {loadedVideos}</p>
+        <p>Videos Loaded: {loadedVideos}/{hightlightsSlides.length}</p>
         <p>Is Last Video: {isLastVideo ? 'Yes' : 'No'}</p>
-      </div> */}
+      </div>
     </div>
   );
 };
