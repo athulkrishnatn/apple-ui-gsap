@@ -43,7 +43,7 @@ const Hero = () => {
       <div className="h-5/6 w-full flex justify-center items-center flex-col">
         <p
           ref={heroRef}
-          className="text-center font-semibold text-3xl text-gray-100 opacity-0 max-md:mb-10"
+          className="text-center font-semibold text-xl md:text-4xl text-gray-100 opacity-0 max-md:mb-10"
         >
           Iphone 15 Pro
         </p>
