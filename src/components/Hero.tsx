@@ -43,9 +43,9 @@ const Hero = () => {
       <div className="h-5/6 w-full flex justify-center items-center flex-col">
         <p
           ref={heroRef}
-          className="text-center font-semibold text-xl md:text-4xl text-gray-100 opacity-0 max-md:mb-10"
+          className="text-center font-normal text-xl md:text-4xl text-gray-100 opacity-0 max-md:mb-10"
         >
-          Iphone 15 Pro
+          Designed to be loved
         </p>
         <div className="md:w-10/12 w-9/12">
           {videoSrc && (
@@ -53,6 +53,8 @@ const Hero = () => {
               className="pointer-events-none"
               autoPlay
               muted
+              loop
+              preload="auto"
               playsInline={true}
               key={videoSrc}
             >

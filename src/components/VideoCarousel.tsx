@@ -277,15 +277,15 @@ const VideoCarousel = () => {
         ))}
       </div>
 
-      <div className="relative flex items-center mt-10">
-        <div className="flex items-center py-5 px-7 bg-gray-300 backdrop-blur rounded-full">
+      <div className="relative flex items-center justify-center mt-10">
+        <div className="flex items-center py-5 px-7 bg-zinc-800 backdrop-blur rounded-full">
           {hightlightsSlides.map((_, i) => (
             <div
               key={i}
               ref={(el) => {
                 videoDivRef.current[i] = el;
               }}
-              className="mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer"
+              className="mx-2 w-3 h-3   relative cursor-pointer"
               onClick={() => {
                 setVideo(prev => ({
                   ...prev,
@@ -301,34 +301,27 @@ const VideoCarousel = () => {
                 ref={(el) => {
                   videoSpanRef.current[i] = el;
                 }}
-                className="absolute h-full w-full rounded-full bg-transparent"
+                className="absolute  h-full w-full rounded-full bg-zinc-700"
               />
             </div>
           ))}
         </div>
 
         <button 
-          className="ml-4 p-4 rounded-full bg-gray-300 backdrop-blur flex items-center justify-center hover:bg-gray-400 transition-colors"
+          className="ml-4 p-4 rounded-full bg-zinc-800 backdrop-blur flex items-center justify-center hover:bg-zinc-700 transition-colors"
           onClick={handlePlayPause}
           type="button"
         >
           <Image
-            width={30}
-            height={30}
+            width={25}
+            height={25}
             src={isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg}
             alt={isLastVideo ? 'replay' : !isPlaying ? 'play' : 'pause'}
           />
         </button>
       </div>
 
-      {/* Debug info - remove in production */}
-      <div className="mt-4 text-sm text-gray-600 bg-gray-100 p-2 rounded">
-        <p>Current Video: {videoId + 1}/{hightlightsSlides.length}</p>
-        <p>Is Playing: {isPlaying ? 'Yes' : 'No'}</p>
-        <p>Start Play: {startPlay ? 'Yes' : 'No'}</p>
-        <p>Videos Loaded: {loadedVideos}/{hightlightsSlides.length}</p>
-        <p>Is Last Video: {isLastVideo ? 'Yes' : 'No'}</p>
-      </div>
+      
     </div>
   );
 };
