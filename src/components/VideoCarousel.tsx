@@ -225,7 +225,7 @@ const VideoCarousel = () => {
   }, [isLastVideo, isPlaying, handleProcess]);
 
   return (
-    <div className="video-container">
+    <div className="video-containe pb-10">
       <div className="flex items-center overflow-hidden">
         {hightlightsSlides.map((list, i) => (
           <div key={list.id} className="slider sm:pr-20 pr-10 flex-shrink-0">

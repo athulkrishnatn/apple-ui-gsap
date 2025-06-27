@@ -5,33 +5,29 @@ import { Carousel } from '@/components/ui/carousel';
 export function CarouselSection() {
   const slides = [
     {
-      title: "Product Demo",
-      button: "Try Now",
-      src: "/assets/images/c1.jpg" // You can use local images too
+      title: "A total powerhouse.",
+      button: "Buy Now",
+      src: "/assets/images/c2.jpg" // You can use local images too
     },
-    {
-      title: "Features Overview", 
-      button: "Learn More",
-      src: "/assets/images/c8.jpgg"
-    },
+    
     {
       title: "Get Started",
-      button: "Sign Up",
+      button: "Buy Now",
       src: "/assets/images/c3.jpg"
     },
     {
-      title: "Get Started",
-      button: "Sign Up",
+      title: "Latest iPhone. Greatest price.",
+      button: "Buy Now",
       src: "/assets/images/c4.jpg"
     },
     {
-      title: "Get Started",
-      button: "Sign Up",
-      src: "/assets/images/c5.jpg"
+      title: "Minimalistic",
+      button: "Buy Now",
+      src: "/assets/images/c1.jpg"
     },
     {
-      title: "Get Started",
-      button: "Sign Up",
+      title: "As amazing as ever.",
+      button: "Buy Now",
       src: "/assets/images/c6.jpg"
     },
     
@@ -43,7 +39,7 @@ export function CarouselSection() {
         <h2 className="text-3xl font-semibold text-center mb-8 text-gray-900 dark:text-white">
           Get to Know Iphone
         </h2>
-        <Carousel slides={slides} />
+        <Carousel  slides={slides} />
       </div>
     </section>
   );

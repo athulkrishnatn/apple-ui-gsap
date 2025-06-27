@@ -33,14 +33,14 @@ const Nav = () => {
     <div className='flex shrink-0 gap-20 mt-15'>
         <span className='absolute font-bold'>iPhone</span>
       <div className='flex flex-col gap-2 mt-10'>
-        <h3 className='mb-2 uppercase text-[#00000080] font-light'>Explore</h3>
+        <h3 className='mb-2 uppercase text-[#00000080] font-medium'>Explore</h3>
         <p>Overview</p>
         <p>Tech Specs</p>
         <p>Compare Models</p>
         <p>Buy iPhone</p>
       </div>
       <div className='flex flex-col gap-2 mt-10'>
-        <h3 className='mb-2 uppercase text-[#00000080] font-light'>Support</h3>
+        <h3 className='mb-2 uppercase text-[#00000080] font-medium'>Support</h3>
         <p>iPhone Support</p>
         <p>iOS 18 Features</p>
         <p>Trade-In</p>

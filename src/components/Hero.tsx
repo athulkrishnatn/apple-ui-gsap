@@ -41,11 +41,17 @@ const Hero = () => {
   return (
     <section className="w-full h-[calc(100vh-60px)] bg-black relative">
       <div className="h-5/6 w-full flex justify-center items-center flex-col">
+      <p
+          ref={heroRef}
+          className="right-58 absolute top-10 font-normal text-xl md:text-2xl text-gray-100 opacity-0 max-md:mb-10"
+        >
+          Designed to be loved.
+        </p>
         <p
           ref={heroRef}
-          className="text-center font-normal text-xl md:text-4xl text-gray-100 opacity-0 max-md:mb-10"
+          className="right-58 absolute top-10 font-normal text-xl md:text-2xl text-gray-100 opacity-0 max-md:mb-10"
         >
-          Designed to be loved
+          Designed to be loved.
         </p>
         <div className="md:w-10/12 w-9/12">
           {videoSrc && (

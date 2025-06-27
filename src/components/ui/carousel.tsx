@@ -83,7 +83,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
+          className="absolute  top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
           style={{
             transform:
               current === index
@@ -92,7 +92,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <img
-            className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+            className="absolute inset-0 w-[120%]  h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
@@ -177,11 +177,11 @@ export function Carousel({ slides }: CarouselProps) {
  
   return (
     <div
-      className="relative w-[70vmin] h-[70vmin] mx-auto"
+      className="relative w-[70vmin] h-[70vmin] rounded-4xl mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+        className="absolute rounded-4xl flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
         style={{
           transform: `translateX(-${current * (100 / slides.length)}%)`,
         }}
@@ -197,7 +197,7 @@ export function Carousel({ slides }: CarouselProps) {
         ))}
       </ul>
  
-      <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
+      <div className="absolute flex rounded-4xl justify-center w-full top-[calc(100%+1rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"
